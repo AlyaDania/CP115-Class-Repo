@@ -1,0 +1,23 @@
+price_coffee = 3.5
+qty_coffee = int(input("Enter the quantity of coffee: "))
+total_coffee = price_coffee * qty_coffee
+
+price_muffin = 2.10
+qty_muffin = int(input("Enter the quantity of muffin: "))
+total_muffin = price_muffin * qty_muffin
+
+price_water = 1.05
+qty_water = int(input("Enter the quantity of water: "))
+total_water = price_water * qty_water
+
+print("-========== RECEIPT ==========")
+print("Item\tPrice\tQty\tTotal")
+print(f"Coffee\t{"$" + str(price_coffee)}\t{qty_coffee}\t{total_coffee}")
+print(f"Muffin\t{"$" + str(price_muffin)}\t{qty_muffin}\t{total_muffin}")
+print(f"Water\t{"$" + str(price_water)}\t{qty_water}\t{total_water}")
+print("------------------------------")
+print(f"Subtotal\t\t\t{total_coffee + total_muffin + total_water}")
+tax = (total_coffee + total_muffin + total_water) * 0.06
+print(f"Tax\t\t\t\t{tax}")
+print(f"Total\t\t\t\t{total_coffee + total_muffin + total_water + tax}")   
+print("============================")
