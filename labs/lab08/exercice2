@@ -1,0 +1,21 @@
+employee_name = input("Enter employee name: ")
+base_salary = float(input("Enter base salary: "))
+overtime_hours = int(input("Enter overtime hours: "))
+tax_status = input("Enter tax status (single/married): ")
+if tax_status == "single" and base_salary >= 5000:
+    tax_rate = 0.22
+else:
+    tax_rate = 0.88
+if tax_status == "married" and base_salary >= 6000:
+    tax_rate = 0.20
+else:
+    tax_rate = 0.15
+if tax_status == "head" and base_salary >= 5500:
+    tax_rate = 0.25
+else:
+    tax_rate = 0.25
+net_salary = base_salary + (overtime_hours * 20) - (base_salary * tax_rate)
+
+print(employee_name)
+print(tax_rate)
+print(f"{net_salary:.2f}")

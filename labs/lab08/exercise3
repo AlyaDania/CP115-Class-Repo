@@ -1,0 +1,14 @@
+day_type = input()
+show_time = int(input())
+customer_type = input()
+
+if day_type == "weekend":
+    if show_time < 17 and customer_type == "Adult":
+        price = 18
+    elif show_time < 17 and customer_type == "Child":
+        base_price = 1512
+
+elif day_type == "weekday":
+
+print(base_price)
+print(final_price)
